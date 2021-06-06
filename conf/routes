@@ -8,3 +8,43 @@ GET     /                           controllers.HomeController.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /orders                     shop.order.OrderController.read
+POST    /orders                     shop.order.OrderController.create
+PUT     /orders/:id                 shop.order.OrderController.update(id: String)
+DELETE  /orders/:id                 shop.order.OrderController.delete(id: String)
+
+GET     /carts                      shop.cart.CartController.read
+POST    /carts                      shop.cart.CartController.create
+PUT     /carts/:id                  shop.cart.CartController.update(id: String)
+DELETE  /carts/:id                  shop.cart.CartController.delete(id: String)
+
+GET     /products                   shop.product.ProductController.read
+POST    /products                   shop.product.ProductController.create
+PUT     /products/:id               shop.product.ProductController.update(id: String)
+DELETE  /products/:id               shop.product.ProductController.delete(id: String)
+
+GET     /images                     shop.product.ImageController.read
+POST    /images                     shop.product.ImageController.create
+PUT     /images/:id                 shop.product.ImageController.update(id: String)
+DELETE  /images/:id                 shop.product.ImageController.delete(id: String)
+
+GET     /categories                 shop.category.CategoryController.read
+POST    /categories                 shop.category.CategoryController.create
+PUT     /categories/:id             shop.category.CategoryController.update(id: String)
+DELETE  /categories/:id             shop.category.CategoryController.delete(id: String)
+
+GET     /reviews                    shop.review.ReviewController.read
+POST    /reviews                    shop.review.ReviewController.create
+PUT     /reviews/:id                shop.review.ReviewController.update(id: String)
+DELETE  /reviews/:id                shop.review.ReviewController.delete(id: String)
+
+GET     /questions                  shop.question.QuestionController.read
+POST    /questions                  shop.question.QuestionController.create
+PUT     /questions/:id              shop.question.QuestionController.update(id: String)
+DELETE  /questions/:id              shop.question.QuestionController.delete(id: String)
+
+GET     /accounts                   shop.account.AccountController.read
+POST    /accounts                   shop.account.AccountController.create
+PUT     /accounts/:id               shop.account.AccountController.update(id: String)
+DELETE  /accounts/:id               shop.account.AccountController.delete(id: String)
